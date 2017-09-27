@@ -18,37 +18,50 @@ public class MainActivity extends AppCompatActivity {
         this.displayScoreTeamB();
     }
 
-    public void attScore (View view){
+    public void resetScores (View view) {
+        this.scoreTeamA = 0;
+        this.scoreTeamB = 0;
+
+        this.displayScoreTeamA();
+        this.displayScoreTeamB();
+    }
+
+    /**
+     * This method update the score of one team
+     * @param view
+     */
+
+    public void updateScore (View view){
 
         switch (view.getId()){
             case R.id.team_a_score_plus1_button:
-                scoreTeamA ++;
-                displayScoreTeamA();
+                this.scoreTeamA ++;
+                this.displayScoreTeamA();
                 return;
 
             case R.id.team_a_score_plus2_button:
-                scoreTeamA += 2;
-                displayScoreTeamA();
+                this.scoreTeamA += 2;
+                this.displayScoreTeamA();
                 return;
 
             case R.id.team_a_score_plus3_button:
-                scoreTeamA += 3;
-                displayScoreTeamA();
+                this.scoreTeamA += 3;
+                this.displayScoreTeamA();
                 return;
 
             case R.id.team_b_score_plus1_button:
-                scoreTeamB ++;
-                displayScoreTeamB();
+                this.scoreTeamB ++;
+                this.displayScoreTeamB();
                 return;
 
             case R.id.team_b_score_plus2_button:
-                scoreTeamB += 2;
-                displayScoreTeamB();
+                this.scoreTeamB += 2;
+                this.displayScoreTeamB();
                 return;
 
             case R.id.team_b_score_plus3_button:
-                scoreTeamB += 3;
-                displayScoreTeamB();
+                this.scoreTeamB += 3;
+                this.displayScoreTeamB();
                 return;
         }
     }
